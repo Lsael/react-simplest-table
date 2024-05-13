@@ -1,0 +1,76 @@
+.customTable {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 1100px;
+}
+
+h2 {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  padding: 10px 0;
+}
+
+td, tr {
+  text-align: center;
+}
+
+td {
+  padding: 8px 0;
+}
+
+.showEntries span {
+  margin: 4px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input, .showEntries select {
+  border: 1.5px gray solid;
+  border-radius: 8px;
+}
+
+.labels {
+  cursor: pointer;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.emptyEntry {
+  background-color: rgba(211, 211, 211, 0.3);
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.tableFooter {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tableFooter span {
+  margin: 0 20px;
+}
+
+.paging span {
+  cursor: pointer;
+}
+
+.paging span:hover {
+  color: gray;
+}
