@@ -1,6 +1,13 @@
 import { useState } from "react";
 import styles from "./CustomTable.module.css";
 
+/**
+ * Display an entry line, called in Entries component.
+ * @param {{label1: string, label2: string, ...}} datas - an object with keys corresponding to labels.
+ * @param {[{id: string, name: string}]} labels - an array of object, containing id and name of the labels.
+ * @param {string} backgroundColor - the color of background.
+ * @param {string} fontColor - the color of the font.
+ */
 const EntryLine = ({ datas, labels, backgroundColor, fontColor }) => {
   return (
     <tr className={styles.entryLine}>
@@ -14,6 +21,14 @@ const EntryLine = ({ datas, labels, backgroundColor, fontColor }) => {
   );
 };
 
+/**
+ * Display all entries.
+ * @param {[{label1: string, label2: string, ...}]} datas - an array of objects with keys corresponding to labels.
+ * @param {[{id: string, name: string}]} labels - an array of object, containing id and name of the labels.
+ * @param {number} entriesPerPage - selected number of entries per page.
+ * @param {number} startIndex - index of the first entry.
+ * @param {{headerBackground: string, headerFont: string, oddLines: string, oddFont: string, evenLines: string, evenFont: string,}} options - an object of options.
+ */
 const Entries = ({ datas, labels, entriesPerPage, startIndex, options }) => {
   const colors = {
     evenBackground: options.evenLines ? options.evenLines : "inherit",
@@ -42,6 +57,14 @@ const Entries = ({ datas, labels, entriesPerPage, startIndex, options }) => {
   return entries;
 };
 
+/**
+ * Display the table.
+ * @param {string} id - CSS id of the table.
+ * @param {string} title - title of the table.
+ * @param {[{id: string, name: string}]} labels - an array of object, containing id and name of the labels.
+ * @param {[{label1: string, label2: string, ...}]} datas - an array of objects with keys corresponding to labels.
+ * @param {{headerBackground: string, headerFont: string, oddLines: string, oddFont: string, evenLines: string, evenFont: string,}} options - an object of options.
+ */
 const CustomTable = ({ id, title, labels, datas, options }) => {
   const [entriesPerPage, setEntriesPerPage] = useState(10);
   const [startIndex, setStartIndex] = useState(0);
