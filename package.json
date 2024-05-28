@@ -1,6 +1,10 @@
 {
   "name": "react-simplest-table",
   "version": "1.0.53",
+  "description": "A simple solution to add custom table in your React app, with pagination, selectable entries per page, search and sort.",
+  "author": "LSael",
+  "keywords": ["React", "table", "React-table"],
+  "license": "ISC",
   "type": "module",
   "main": "dist/main.js",
   "files": [
