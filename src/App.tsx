@@ -1,10 +1,7 @@
-import { useState } from 'react'
 import { CustomTable } from '../dist/main'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <CustomTable title={"someTitle"}
     id={"someId"}
